@@ -1,7 +1,7 @@
 using JetBrains.Annotations;
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class ClickObject : MonoBehaviour
 {
     public string setRune = null;
     // tag int_obj_fireplace = "red";
@@ -27,8 +27,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
         // clicking another rune changes it, clicking an object goes to ClickObject
         // mouse is colour of rune?
     }
-    private void ClickObject()
-    {
+    // private void ClickObject()
+    // {
         // on click object:
             // does rune variable have value?
                 // no - end or audio to show negative
@@ -43,5 +43,5 @@ public class NewMonoBehaviourScript : MonoBehaviour
                 // mouse loses rune colour / reset rune variable
         // check rune flag/colour
 
-    }
+    // }
 }
