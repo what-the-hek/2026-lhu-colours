@@ -96,13 +96,13 @@ public class CursorFollow : MonoBehaviour
         }
 
         // NEW: Detect click to instantly surge the progress value and fire a burst
-        if (Mouse.current.leftButton.wasPressedThisFrame && isHoveringInteractable)
+        if (Mouse.current.leftButton.wasPressedThisFrame && isHoveringInteractable && playerController.ChosenRune != "")
         {
             particleSys.Emit(30); // Instant magic spell blast count
             hoverProgress = 1f;    // Set progress to max opacity/size instantly so it "pulses"
             
             playerController.ChosenRune = "";
-            cursor.cursorColor = new Color();
+            cursorColor.a = 0; // Now fade out fully
         }
 
         // 3. Smooth out the transition variable over time
