@@ -8,7 +8,7 @@ using UnityEngine;
 public class CursorFollow : MonoBehaviour
 {
     private Camera mainCamera;
-    public PlayerController playerController;
+    private PlayerController playerController;
     private ParticleSystem particleSys;
     private ParticleSystem.ColorOverLifetimeModule colorOverLifetime;
 
@@ -60,6 +60,9 @@ public class CursorFollow : MonoBehaviour
 
     void Start()
     {
+        // Not good performance to find actors at runtime, but since it's a simple game and this only runs once at start its fine
+        playerController = FindAnyObjectByType<PlayerController>();
+
         mainCamera = Camera.main;
 
         // Cache the particle system components and modules
@@ -123,7 +126,7 @@ public class CursorFollow : MonoBehaviour
                 // extra speed and size for a quick spell burst
                 hoverProgress = 1f;    // Set progress to max opacity/size instantly so it "pulses"
                 // Don't spawn any more after the burst
-                emissionFactor = 0f;
+                //emissionFactor = 0f;
             }
             else
             {
@@ -131,7 +134,7 @@ public class CursorFollow : MonoBehaviour
                 particleSys.Emit(30); // Instant magic spell blast count
                 hoverProgress = 1f;    // Set progress to max opacity/size instantly so it "pulses"
                 // Don't spawn any more after the burst
-                emissionFactor = 0f;
+               // emissionFactor = 0f;
             }
             StartCoroutine(ExecuteAfterTime(0.75f, () =>
             {

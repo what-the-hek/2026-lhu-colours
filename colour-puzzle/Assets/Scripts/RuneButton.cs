@@ -2,13 +2,16 @@ using UnityEngine;
 
 public class RuneButton : MonoBehaviour
 {
-    public PlayerController playerController;
-    public CursorFollow cursor;
+    private PlayerController playerController;
+    private CursorFollow cursor;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
+        // Not good performance to find actors at runtime, but since it's a simple game and this only runs once at start its fine
+        playerController = FindAnyObjectByType<PlayerController>();
+        cursor = FindAnyObjectByType<CursorFollow>();
     }
 
     // Update is called once per frame

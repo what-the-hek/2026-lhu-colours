@@ -34,6 +34,7 @@ public class ScoreManager : MonoBehaviour
         // this does mean each level needs to have the same amount of interactable objects to pass
         if (GlobalVariables.CurrentLevel == GlobalVariables.LevelScore)
         {
+            Debug.Log("Level passed. Activating next level button.");
             nextButton.gameObject.SetActive(true);
         }
     }
