@@ -1,58 +1,81 @@
-using JetBrains.Annotations;
 using UnityEngine;
 
 public class ClickObject : MonoBehaviour
 {
     public PlayerController playerController;
-    public GameObject redObjectBefore;
-    public GameObject redObjectAfter;
-    public GameObject blueObjectBefore;
-    public GameObject blueObjectAfter;
-    public GameObject greenObjectBefore;
-    public GameObject greenObjectAfter;
-    public GameObject purpleObjectBefore;
-    public GameObject purpleObjectAfter;
-
-
-    void Start()
+    public ObjectManager objectManager;
+    private void OnMouseDown()
     {
-        redObjectAfter.gameObject.SetActive(false);
-        blueObjectAfter.gameObject.SetActive(false);
-        greenObjectAfter.gameObject.SetActive(false);
-        purpleObjectAfter.gameObject.SetActive(false);
+        if (CompareTag("red_object"))
+        {
+            CompareValues("red");
+            // Debug.Log("red rune applied to red object");
+        }
+        else if (CompareTag("blue_object"))
+        {
+            CompareValues("blue");
+            // Debug.Log("blue rune applied to blue object");
+        }
+        else if (CompareTag("purple_object"))
+        {
+            CompareValues("purple");
+            // Debug.Log("purple rune applied to purple object");
+        }
+        else if (CompareTag("green_object"))
+        {
+            CompareValues("green");
+            // Debug.Log("green rune applied to green object");
+        }
+        else
+        {
+            // Debug.Log("not an interactable object");
+        }
     }
 
-    private void MouseClick()
+    public void CompareValues(string ObjectClicked)
     {
-        // click on rune? go to ClickRune
-        // click on object? go to ClickObject
-
-        // click on no object?
-            // negative sound - cat hiss?
-            // mouse loses rune colour / reset rune variable
+        Debug.Log($"Clicked {ObjectClicked} object");
+        // Debug.Log($"Chosen rune {playerController.ChosenRune}");
+        if (playerController.ChosenRune == ObjectClicked)
+        {
+            Debug.Log("Correct rune applied to object!");
+            objectManager.SwitchSprite(ObjectClicked);
+            gameObject.SetActive(false);
+        }
     }
 
-    private void ClickRune()
-    {
-        // on rune click, set rune variable to colour
-        // clicking another rune changes it, clicking an object goes to ClickObject
-        // mouse is colour of rune?
-    }
-    // private void ClickObject()
+    //  NOTES
+    // private void MouseClick()
     // {
-        // on click object:
-            // does rune variable have value?
-                // no - end or audio to show negative
-            // does rune variable match object tag?
-            // if yes
-                // change sprite/animation
-                // particle effect
-                // audio
-                // mouse loses rune colour / reset rune variable
-            // if no
-                // negative sound - cat hiss?
-                // mouse loses rune colour / reset rune variable
-        // check rune flag/colour
+    //     // click on rune? go to ClickRune
+    //     // click on object? go to ClickObject
 
+    //     // click on no object?
+    //         // negative sound - cat hiss?
+    //         // mouse loses rune colour / reset rune variable
     // }
+
+    // private void ClickRune()
+    // {
+    //     // on rune click, set rune variable to colour
+    //     // clicking another rune changes it, clicking an object goes to ClickObject
+    //     // mouse is colour of rune?
+    // }
+    // // private void ClickObject()
+    // // {
+    //     // on click object:
+    //         // does rune variable have value?
+    //             // no - end or audio to show negative
+    //         // does rune variable match object tag?
+    //         // if yes
+    //             // change sprite/animation
+    //             // particle effect
+    //             // audio
+    //             // mouse loses rune colour / reset rune variable
+    //         // if no
+    //             // negative sound - cat hiss?
+    //             // mouse loses rune colour / reset rune variable
+    //     // check rune flag/colour
+
+    // // }
 }
