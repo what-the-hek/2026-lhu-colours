@@ -2,8 +2,20 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - red_rune
+  - purple_rune
+  - blue_rune
+  - yellow_rune
+  - green_rune
+  - orange_rune
+  - red_object
+  - purple_object
+  - blue_object
+  - yellow_object
+  - green_object
+  - orange_object
   layers:
   - Default
   - TransparentFX
@@ -41,3 +53,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  m_RenderingLayers:
+  - Default
+  m_MigratedRenderPipelines: []
