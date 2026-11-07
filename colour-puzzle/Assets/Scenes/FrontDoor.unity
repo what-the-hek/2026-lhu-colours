@@ -295,6 +295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c9c67c4e96c02c4bb2d834ffc25870b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreManager
+  nextButton: {fileID: 1733709375}
 --- !u!4 &378102653
 Transform:
   m_ObjectHideFlags: 0

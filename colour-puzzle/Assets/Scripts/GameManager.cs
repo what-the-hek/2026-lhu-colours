@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         GlobalVariables.LevelScore = 0;
+        GlobalVariables.CurrentLevel = 0;
     }
 
     void Update()
