@@ -5,6 +5,7 @@ public class ClickObject : MonoBehaviour
     public PlayerController playerController;
     public ObjectManager objectManager;
     public ScoreManager scoreManager;
+    public AudioManager audioManager;
     private void OnMouseDown()
     {
         if (CompareTag("red_object"))
@@ -39,6 +40,7 @@ public class ClickObject : MonoBehaviour
         if (playerController.ChosenRune == ObjectClicked)
         {
             Debug.Log("Correct rune applied to object!");
+            audioManager.PlayMagicObject();
             scoreManager.UpdateScore();
             objectManager.SwitchSprite(ObjectClicked);
             gameObject.SetActive(false);
