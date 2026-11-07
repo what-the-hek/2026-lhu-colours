@@ -3,12 +3,23 @@ using UnityEngine;
 
 public class ClickObject : MonoBehaviour
 {
-    public string setRune = null;
-    // tag int_obj_fireplace = "red";
-    // tag int_obj_blanket = "purple";
+    public PlayerController playerController;
+    public GameObject redObjectBefore;
+    public GameObject redObjectAfter;
+    public GameObject blueObjectBefore;
+    public GameObject blueObjectAfter;
+    public GameObject greenObjectBefore;
+    public GameObject greenObjectAfter;
+    public GameObject purpleObjectBefore;
+    public GameObject purpleObjectAfter;
+
 
     void Start()
     {
+        redObjectAfter.gameObject.SetActive(false);
+        blueObjectAfter.gameObject.SetActive(false);
+        greenObjectAfter.gameObject.SetActive(false);
+        purpleObjectAfter.gameObject.SetActive(false);
     }
 
     private void MouseClick()
