@@ -7,9 +7,9 @@ public class CursorFollow : MonoBehaviour
     private ParticleSystem particleSys;
     private ParticleSystem.ColorOverLifetimeModule colorOverLifetime;
 
-    // 1. New module references to control emission, size, and speed
-    private ParticleSystem.EmissionModule emissionModule;
-    private ParticleSystem.MainModule mainModule;
+    // Modules needed for controlling count, size, and speed
+    private ParticleSystem.MainModule particleMain;
+    private ParticleSystem.EmissionModule particleEmission;
 
     [Header("Cursor Settings")]
     public Color cursorColor = Color.white;
@@ -21,23 +21,31 @@ public class CursorFollow : MonoBehaviour
     [Tooltip("Only check these specific layers for interactables (Highly recommended for performance).")]
     [SerializeField] private LayerMask interactableLayers;
 
-    [Header("Hover Modifier Settings")]
+    [Header("Transition Settings")]
+    [Tooltip("How fast the cursor transforms. Higher values mean a quicker fade-in/out.")]
+    [SerializeField] private float transitionSpeed = 10f;
+
+    [Header("Hover Visual Modifiers")]
     [Range(0f, 1f), Tooltip("How much to dim the original alpha when NOT hovering (e.g., 0.1 = 10% of targetColor.a)")]
     [SerializeField] private float dimFactor = 0.1f;
 
-    [Range(0f, 1f), Tooltip("Multiplier for the number of particles spawned when NOT hovering.")]
-    [SerializeField] private float nonHoverEmissionMultiplier = 0.3f;
+    [Range(0f, 1f), Tooltip("Multiplier for particle size when NOT hovering (e.g., 0.4 = 40% of original size)")]
+    [SerializeField] private float sizeFactor = 0.8f;
 
-    [Range(0f, 1f), Tooltip("Multiplier for particle size when NOT hovering.")]
-    [SerializeField] private float nonHoverSizeMultiplier = 0.5f;
+    [Range(0f, 1f), Tooltip("Multiplier for particle speed when NOT hovering.")]
+    [SerializeField] private float speedFactor = 0.3f;
 
-    [Range(0f, 1f), Tooltip("Multiplier for internal start speed when NOT hovering.")]
-    [SerializeField] private float nonHoverSpeedMultiplier = 0.4f;
+    [Range(0f, 1f), Tooltip("Multiplier for particle emission rate when NOT hovering.")]
+    [SerializeField] private float emissionFactor = 0.5f;
 
-    // Caches to hold the original Inspector values designed in the Particle System UI
-    private float originalRateOverDistance;
-    private float originalStartSize;
-    private float originalStartSpeed;
+    // Track the initial configuration set up in the Unity Inspector
+    private float baseStartSize;
+    private float baseStartSpeed;
+    private float baseEmissionRateOverTime;
+    private float baseEmissionRateOverDistance;
+
+    // A single value from 0 (fully idle) to 1 (fully hovering) to drive the lerp
+    private float hoverProgress = 0f;
 
     void Start()
     {
@@ -46,16 +54,17 @@ public class CursorFollow : MonoBehaviour
         // Cache the particle system components and modules
         particleSys = GetComponent<ParticleSystem>();
         colorOverLifetime = particleSys.colorOverLifetime;
-        emissionModule = particleSys.emission;
-        mainModule = particleSys.main;
+        particleMain = particleSys.main;
+        particleEmission = particleSys.emission;
 
         // Ensure the particle module is active
         colorOverLifetime.enabled = true;
 
-        // 2. Remember the original values configured in the Unity Inspector UI
-        originalRateOverDistance = emissionModule.rateOverDistance.constant;
-        originalStartSize = mainModule.startSize.constant;
-        originalStartSpeed = mainModule.startSpeed.constant;
+        // Store the default values you created in the Inspector so we can revert back to them
+        baseStartSize = particleMain.startSize.constant;
+        baseStartSpeed = particleMain.startSpeed.constant;
+        baseEmissionRateOverTime = particleEmission.rateOverTime.constant;
+        baseEmissionRateOverDistance = particleEmission.rateOverDistance.constant;
     }
 
     void Update()
@@ -66,12 +75,12 @@ public class CursorFollow : MonoBehaviour
         // Read the mouse screen position using the Input System API
         Vector2 mouseScreenPos = Mouse.current.position.ReadValue();
 
-        // Position tracking: Convert screen position to 2D World Space
+        // 1. Position tracking: Convert screen position to 2D World Space
         Vector3 mousePos3D = new Vector3(mouseScreenPos.x, mouseScreenPos.y, 10f);
         Vector3 worldPosition = mainCamera.ScreenToWorldPoint(mousePos3D);
         transform.position = worldPosition;
 
-        // 2D Raycast tracking: Check if the cursor is resting over a 2D Collider
+        // 2. 2D Raycast tracking: Check if the cursor is resting over a 2D Collider
         Ray ray = mainCamera.ScreenPointToRay(mouseScreenPos);
         RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity, interactableLayers);
 
@@ -84,29 +93,37 @@ public class CursorFollow : MonoBehaviour
             isHoveringInteractable = false;
         }
 
-        // 3. Dynamically adjust particle settings based on hover state
-        UpdateParticleProperties();
+        // 3. Smooth out the transition variable over time
+        CalculateTransitionProgress();
 
-        // Generate and apply the updated dynamic alpha gradient
+        // 4. Dynamically adjust particle properties based on smoothed state
+        ApplyDynamicModifiers();
+
+        // 5. Generate and apply the updated dynamic alpha gradient
         ApplySolidColorWithFade(cursorColor);
     }
 
-    private void UpdateParticleProperties()
+    private void CalculateTransitionProgress()
     {
-        if (isHoveringInteractable)
-        {
-            // Reset to full/default values when hovering an interactable
-            emissionModule.rateOverDistance = originalRateOverDistance;
-            mainModule.startSize = originalStartSize;
-            mainModule.startSpeed = originalStartSpeed;
-        }
-        else
-        {
-            // Diminish the settings using the provided multiplier constraints when just moving over the background
-            emissionModule.rateOverDistance = originalRateOverDistance * nonHoverEmissionMultiplier;
-            mainModule.startSize = originalStartSize * nonHoverSizeMultiplier;
-            mainModule.startSpeed = originalStartSpeed * nonHoverSpeedMultiplier;
-        }
+        // Target 1.0f if hovering, target 0.0f if not hovering
+        float targetProgress = isHoveringInteractable ? 1f : 0f;
+
+        // Smoothly step towards our target using Time.deltaTime to stay frame-rate independent
+        hoverProgress = Mathf.MoveTowards(hoverProgress, targetProgress, transitionSpeed * Time.deltaTime);
+    }
+
+    private void ApplyDynamicModifiers()
+    {
+        // Linearly interpolate between the idle modifier and full size/speed base values
+        float currentSizeMultiplier = Mathf.Lerp(sizeFactor, 1f, hoverProgress);
+        float currentSpeedMultiplier = Mathf.Lerp(speedFactor, 1f, hoverProgress);
+        float currentEmissionMultiplier = Mathf.Lerp(emissionFactor, 1f, hoverProgress);
+
+        // Apply values to the particle system
+        particleMain.startSize = baseStartSize * currentSizeMultiplier;
+        particleMain.startSpeed = baseStartSpeed * currentSpeedMultiplier;
+        particleEmission.rateOverTime = baseEmissionRateOverTime * currentEmissionMultiplier;
+        particleEmission.rateOverDistance = baseEmissionRateOverDistance * currentEmissionMultiplier;
     }
 
     private void ApplySolidColorWithFade(Color targetColor)
@@ -118,8 +135,9 @@ public class CursorFollow : MonoBehaviour
         colorKeys[0] = new GradientColorKey(targetColor, 0.0f);
         colorKeys[1] = new GradientColorKey(targetColor, 1.0f);
 
-        // Determine starting opacity using targetColor.a and the hovering state
-        float startingAlpha = isHoveringInteractable ? targetColor.a : (targetColor.a * dimFactor);
+        // Linearly interpolate alpha between the idle modifier and 100% of targetColor.a
+        float currentAlphaMultiplier = Mathf.Lerp(dimFactor, 1f, hoverProgress);
+        float startingAlpha = targetColor.a * currentAlphaMultiplier;
 
         // Define the alpha keys (Starts at chosen opacity and fades completely to 0 transparency)
         GradientAlphaKey[] alphaKeys = new GradientAlphaKey[2];
