@@ -4,6 +4,7 @@ public class ClickObject : MonoBehaviour
 {
     public PlayerController playerController;
     public ObjectManager objectManager;
+    public ScoreManager scoreManager;
     private void OnMouseDown()
     {
         if (CompareTag("red_object"))
@@ -28,17 +29,17 @@ public class ClickObject : MonoBehaviour
         }
         else
         {
-            // Debug.Log("not an interactable object");
+            Debug.Log("not an interactable object");
         }
     }
 
     public void CompareValues(string ObjectClicked)
     {
         Debug.Log($"Clicked {ObjectClicked} object");
-        // Debug.Log($"Chosen rune {playerController.ChosenRune}");
         if (playerController.ChosenRune == ObjectClicked)
         {
             Debug.Log("Correct rune applied to object!");
+            scoreManager.UpdateScore();
             objectManager.SwitchSprite(ObjectClicked);
             gameObject.SetActive(false);
         }
