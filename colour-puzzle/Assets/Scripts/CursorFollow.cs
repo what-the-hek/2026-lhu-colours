@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
 using System.Collections;
-using UnityEngine;
 
 // A class to handle magical effects following the cursor and the different states it can be in (e.g. intense glow when hovering an interactable)
 public class CursorFollow : MonoBehaviour
