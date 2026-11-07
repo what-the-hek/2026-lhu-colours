@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class CursorFollow : MonoBehaviour
 {
     private Camera mainCamera;
+    public PlayerController playerController;
     private ParticleSystem particleSys;
     private ParticleSystem.ColorOverLifetimeModule colorOverLifetime;
 
@@ -86,11 +87,22 @@ public class CursorFollow : MonoBehaviour
 
         if (hit.collider != null)
         {
+            // Check if the 2D object (or its parent components) implements our custom interface
             isHoveringInteractable = hit.collider.GetComponentInParent<IInteractable>() != null;
         }
         else
         {
             isHoveringInteractable = false;
+        }
+
+        // NEW: Detect click to instantly surge the progress value and fire a burst
+        if (Mouse.current.leftButton.wasPressedThisFrame && isHoveringInteractable)
+        {
+            particleSys.Emit(30); // Instant magic spell blast count
+            hoverProgress = 1f;    // Set progress to max opacity/size instantly so it "pulses"
+            
+            playerController.ChosenRune = "";
+            cursor.cursorColor = new Color();
         }
 
         // 3. Smooth out the transition variable over time
