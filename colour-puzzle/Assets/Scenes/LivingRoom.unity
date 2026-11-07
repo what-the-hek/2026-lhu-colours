@@ -1372,6 +1372,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c9c67c4e96c02c4bb2d834ffc25870b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreManager
+  nextScene: TitleScreen
+  nextButton: {fileID: 1956948120}
 --- !u!4 &1470785631
 Transform:
   m_ObjectHideFlags: 0

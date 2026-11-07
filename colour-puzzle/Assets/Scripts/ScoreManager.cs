@@ -1,8 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
+    public string nextScene = "";
+
 	public Button nextButton;
     void Start()
     {
@@ -14,6 +17,9 @@ public class ScoreManager : MonoBehaviour
         Debug.Log($"Starting score {GlobalVariables.LevelScore}");
         GlobalVariables.CurrentLevel += 1;        
         Debug.Log($"Current Level {GlobalVariables.CurrentLevel}");
+
+        Button nextBtn = nextButton.GetComponent<Button>();
+		nextBtn.onClick.AddListener(TaskOnClickNext);
     }
 
     public void UpdateScore()
@@ -25,9 +31,16 @@ public class ScoreManager : MonoBehaviour
 
     public void CheckLevelScore()
     {
+        // this does mean each level needs to have the same amount of interactable objects to pass
         if (GlobalVariables.CurrentLevel == GlobalVariables.LevelScore)
         {
             nextButton.gameObject.SetActive(true);
         }
     }
+
+    void TaskOnClickNext()
+	{
+		SceneManager.LoadScene(nextScene);
+		Debug.Log("You have clicked the next room!");
+	}
 }
