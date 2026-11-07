@@ -6,6 +6,6 @@ public class PlayerController : MonoBehaviour
 
     public virtual void Update()
     {
-        Debug.Log("Player chosen rune is " + ChosenRune);
+        // Debug.Log("Player chosen rune is " + ChosenRune);
     }
 }
