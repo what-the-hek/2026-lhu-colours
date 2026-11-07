@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
+using UnityEngine.UI;using UnityEngine.InputSystem;
+using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 namespace HeneGames.DialogueSystem
 {
@@ -67,7 +68,7 @@ namespace HeneGames.DialogueSystem
         public virtual void InputUpdate()
         {
             //Next dialogue input
-            if (Keyboard.current.spaceKey.isPressed)
+            if (Keyboard.current.spaceKey.wasPressedThisFrame)
             {
                 NextSentenceSoft();
             }

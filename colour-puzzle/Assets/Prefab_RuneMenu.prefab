@@ -116,6 +116,8 @@ GameObject:
   - component: {fileID: 9105410661223513304}
   - component: {fileID: 7955641190311146269}
   - component: {fileID: 1041046874249420151}
+  - component: {fileID: 1299397429818846585}
+  - component: {fileID: 8063789826859288737}
   m_Layer: 5
   m_Name: Btn-RedRune
   m_TagString: Untagged
@@ -139,8 +141,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
+  m_AnchoredPosition: {x: -328, y: 190}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1247633840710154116
 CanvasRenderer:
@@ -248,6 +250,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3194a488c60c38040a1b0712ef0e61b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RuneButton
+--- !u!114 &1299397429818846585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5257325543989069149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2507517cb4a76498d747b9f51eed3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CanvasTooltip
+  tooltipText: 
+  tooltipPrefab: {fileID: 843102232158436017, guid: 217cec46509ac9348addbecfb8bc2329, type: 3}
+  canvas: {fileID: 4566486982529528565}
+--- !u!114 &8063789826859288737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5257325543989069149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2507517cb4a76498d747b9f51eed3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  tooltipText: 
+  tooltipPrefab: {fileID: 0}
+  canvas: {fileID: 0}
 --- !u!1 &7461043195336565068
 GameObject:
   m_ObjectHideFlags: 0
