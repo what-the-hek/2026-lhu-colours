@@ -1,5 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
+using System.Collections;
+using UnityEngine;
 
 // A class to handle magical effects following the cursor and the different states it can be in (e.g. intense glow when hovering an interactable)
 public class CursorFollow : MonoBehaviour
@@ -38,10 +41,10 @@ public class CursorFollow : MonoBehaviour
     [SerializeField] private float sizeFactor = 0.8f;
 
     [Range(0f, 1f), Tooltip("Multiplier for particle speed when NOT hovering.")]
-    [SerializeField] private float speedFactor = 0.3f;
+    [SerializeField] private float speedFactor = 0.9f;
 
     [Range(0f, 1f), Tooltip("Multiplier for particle emission rate when NOT hovering.")]
-    [SerializeField] private float emissionFactor = 0.5f;
+    [SerializeField] private float emissionFactor = 0.9f;
 
     // Track the initial configuration set up in the Unity Inspector
     private float baseStartSize;
@@ -77,6 +80,13 @@ public class CursorFollow : MonoBehaviour
         clickFadeProgress = 1f;
     }
 
+    private IEnumerator ExecuteAfterTime(float delay, Action task)
+    {
+        yield return new WaitForSeconds(delay);
+
+        // ?. ensures it only runs if someone is subscribed/passed a method
+        task?.Invoke();
+    }
     void Update()
     {
         // Check if a mouse/pointer is connected to the system
@@ -105,12 +115,29 @@ public class CursorFollow : MonoBehaviour
         }
 
         // Detect click to instantly surge the progress value and fire a burst
-        if (Mouse.current.leftButton.wasPressedThisFrame && isHoveringInteractable && playerController.ChosenRune != "")
+        if (Mouse.current.leftButton.wasPressedThisFrame && playerController.ChosenRune != "")
         {
-            particleSys.Emit(30); // Instant magic spell blast count
-            hoverProgress = 1f;    // Set progress to max opacity/size instantly so it "pulses"
-
-            playerController.ChosenRune = "";
+            if(isHoveringInteractable)
+            {
+                particleSys.Emit(100); // Instant magic spell blast count
+                // extra speed and size for a quick spell burst
+                hoverProgress = 1f;    // Set progress to max opacity/size instantly so it "pulses"
+                // Don't spawn any more after the burst
+                emissionFactor = 0f;
+            }
+            else
+            {
+                /// still give some visual feedback for a 'failed cast' - but less
+                particleSys.Emit(30); // Instant magic spell blast count
+                hoverProgress = 1f;    // Set progress to max opacity/size instantly so it "pulses"
+                // Don't spawn any more after the burst
+                emissionFactor = 0f;
+            }
+            StartCoroutine(ExecuteAfterTime(0.75f, () =>
+            {
+                // Deselect the rune
+                playerController.ChosenRune = "";
+            }));
         }
 
         // Smoothly track whether we should be visible or faded based on the rune status
