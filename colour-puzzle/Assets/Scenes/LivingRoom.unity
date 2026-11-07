@@ -571,8 +571,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3194a488c60c38040a1b0712ef0e61b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RuneButton
-  playerController: {fileID: 757713152}
-  cursor: {fileID: 564042040}
 --- !u!114 &865849206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -855,8 +853,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3194a488c60c38040a1b0712ef0e61b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RuneButton
-  playerController: {fileID: 757713152}
-  cursor: {fileID: 564042040}
 --- !u!114 &1018003019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -963,6 +959,7 @@ GameObject:
   - component: {fileID: 1141322533}
   - component: {fileID: 1141322535}
   - component: {fileID: 1141322534}
+  - component: {fileID: 1141322536}
   m_Layer: 0
   m_Name: before_blanket
   m_TagString: purple_object
@@ -1107,6 +1104,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1141322536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141322531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7866a4eb08da4d4429695a95e6e396ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IInteractable
 --- !u!1 &1264155024
 GameObject:
   m_ObjectHideFlags: 0
@@ -1152,6 +1161,7 @@ GameObject:
   - component: {fileID: 1338850477}
   - component: {fileID: 1338850478}
   - component: {fileID: 1338850479}
+  - component: {fileID: 1338850480}
   m_Layer: 0
   m_Name: before_fireplace
   m_TagString: red_object
@@ -1296,6 +1306,18 @@ MonoBehaviour:
   objectManager: {fileID: 1430019446}
   scoreManager: {fileID: 1470785630}
   audioManager: {fileID: 1902984136}
+--- !u!114 &1338850480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338850475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7866a4eb08da4d4429695a95e6e396ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IInteractable
 --- !u!1 &1430019444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1475,8 +1497,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3194a488c60c38040a1b0712ef0e61b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RuneButton
-  playerController: {fileID: 757713152}
-  cursor: {fileID: 564042040}
 --- !u!114 &1595947878
 MonoBehaviour:
   m_ObjectHideFlags: 0
