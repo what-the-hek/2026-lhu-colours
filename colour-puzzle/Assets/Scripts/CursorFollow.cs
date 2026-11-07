@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+// A class to handle magical effects following the cursor and the different states it can be in (e.g. intense glow when hovering an interactable)
 public class CursorFollow : MonoBehaviour
 {
     private Camera mainCamera;
@@ -26,6 +27,9 @@ public class CursorFollow : MonoBehaviour
     [Tooltip("How fast the cursor transforms. Higher values mean a quicker fade-in/out.")]
     [SerializeField] private float transitionSpeed = 10f;
 
+    [Tooltip("How fast the cursor alpha completely fades away to 0 after clicking an object.")]
+    [SerializeField] private float clickFadeSpeed = 2f;
+
     [Header("Hover Visual Modifiers")]
     [Range(0f, 1f), Tooltip("How much to dim the original alpha when NOT hovering (e.g., 0.1 = 10% of targetColor.a)")]
     [SerializeField] private float dimFactor = 0.1f;
@@ -48,6 +52,9 @@ public class CursorFollow : MonoBehaviour
     // A single value from 0 (fully idle) to 1 (fully hovering) to drive the lerp
     private float hoverProgress = 0f;
 
+    // Smooth internal multiplier variable used to drive the click fade down to 0
+    private float clickFadeProgress = 1f;
+
     void Start()
     {
         mainCamera = Camera.main;
@@ -66,6 +73,8 @@ public class CursorFollow : MonoBehaviour
         baseStartSpeed = particleMain.startSpeed.constant;
         baseEmissionRateOverTime = particleEmission.rateOverTime.constant;
         baseEmissionRateOverDistance = particleEmission.rateOverDistance.constant;
+
+        clickFadeProgress = 1f;
     }
 
     void Update()
@@ -95,15 +104,18 @@ public class CursorFollow : MonoBehaviour
             isHoveringInteractable = false;
         }
 
-        // NEW: Detect click to instantly surge the progress value and fire a burst
+        // Detect click to instantly surge the progress value and fire a burst
         if (Mouse.current.leftButton.wasPressedThisFrame && isHoveringInteractable && playerController.ChosenRune != "")
         {
             particleSys.Emit(30); // Instant magic spell blast count
             hoverProgress = 1f;    // Set progress to max opacity/size instantly so it "pulses"
-            
+
             playerController.ChosenRune = "";
-            cursorColor.a = 0; // Now fade out fully
         }
+
+        // Smoothly track whether we should be visible or faded based on the rune status
+        float targetClickProgress = (playerController.ChosenRune != "") ? 1f : 0f;
+        clickFadeProgress = Mathf.MoveTowards(clickFadeProgress, targetClickProgress, clickFadeSpeed * Time.deltaTime);
 
         // 3. Smooth out the transition variable over time
         CalculateTransitionProgress();
@@ -134,8 +146,10 @@ public class CursorFollow : MonoBehaviour
         // Apply values to the particle system
         particleMain.startSize = baseStartSize * currentSizeMultiplier;
         particleMain.startSpeed = baseStartSpeed * currentSpeedMultiplier;
-        particleEmission.rateOverTime = baseEmissionRateOverTime * currentEmissionMultiplier;
-        particleEmission.rateOverDistance = baseEmissionRateOverDistance * currentEmissionMultiplier;
+
+        // Concurrently drop emission generation completely to zero over time
+        particleEmission.rateOverTime = baseEmissionRateOverTime * currentEmissionMultiplier * clickFadeProgress;
+        particleEmission.rateOverDistance = baseEmissionRateOverDistance * currentEmissionMultiplier * clickFadeProgress;
     }
 
     private void ApplySolidColorWithFade(Color targetColor)
@@ -150,6 +164,9 @@ public class CursorFollow : MonoBehaviour
         // Linearly interpolate alpha between the idle modifier and 100% of targetColor.a
         float currentAlphaMultiplier = Mathf.Lerp(dimFactor, 1f, hoverProgress);
         float startingAlpha = targetColor.a * currentAlphaMultiplier;
+
+        // Multiply by the fading progress variable so newly spawned trailing items decay smoothly
+        startingAlpha *= clickFadeProgress;
 
         // Define the alpha keys (Starts at chosen opacity and fades completely to 0 transparency)
         GradientAlphaKey[] alphaKeys = new GradientAlphaKey[2];
