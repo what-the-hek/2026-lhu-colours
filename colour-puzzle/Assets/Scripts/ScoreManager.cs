@@ -31,6 +31,7 @@ public class ScoreManager : MonoBehaviour
 
     public void CheckLevelScore()
     {
+        Debug.Log("Next button should appear soon...");
         // this does mean each level needs to have the same amount of interactable objects to pass
         if (GlobalVariables.CurrentLevel == GlobalVariables.LevelScore)
         {
@@ -41,7 +42,7 @@ public class ScoreManager : MonoBehaviour
 
     void TaskOnClickNext()
 	{
+        Debug.Log("You have clicked the next room!");
 		SceneManager.LoadScene(nextScene);
-		Debug.Log("You have clicked the next room!");
 	}
 }
