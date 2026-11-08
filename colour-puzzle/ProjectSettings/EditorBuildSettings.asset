@@ -20,5 +20,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/End.unity
     guid: e05552d9db0749c43ba23f3f7c021815
+  - enabled: 1
+    path: Assets/Scenes/Scene_FinalDialogue.unity
+    guid: b569509fb7b92854a92d81847daea92a
+  - enabled: 1
+    path: Assets/Scenes/Scene_CatAngry.unity
+    guid: 891930d0a9c130249b4c17b1580c29f0
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
