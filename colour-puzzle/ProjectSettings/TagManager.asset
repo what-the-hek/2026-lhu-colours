@@ -17,6 +17,7 @@ TagManager:
   - green_object
   - orange_object
   - Interactable
+  - red2_object
   layers:
   - Default
   - TransparentFX
