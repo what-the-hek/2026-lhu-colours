@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f4a308dae7ffd048a8b0eb8d5ae4a02, type: 3}
-  m_Name: Player
+  m_Name: Bianca_Sad
   m_EditorClassIdentifier: 
-  characterPhoto: {fileID: 4287375488858681629, guid: 71be125456233df40bf361988f4577e7, type: 3}
-  characterName: Narration
+  characterPhoto: {fileID: 7164607158652468116, guid: 6cb6d63c26ba2fe4886f06b1dd752d6f, type: 3}
+  characterName: Bianca

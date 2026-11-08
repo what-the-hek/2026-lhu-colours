@@ -18,6 +18,7 @@ TagManager:
   - orange_object
   - Interactable
   - red2_object
+  - green2_object
   layers:
   - Default
   - TransparentFX
@@ -54,6 +55,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 3819444591
     locked: 0
   - name: CursorGlow_Foreground
     uniqueID: 1047045471

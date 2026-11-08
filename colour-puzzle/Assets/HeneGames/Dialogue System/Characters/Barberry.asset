@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4a308dae7ffd048a8b0eb8d5ae4a02, type: 3}
   m_Name: Barberry
   m_EditorClassIdentifier: 
-  characterPhoto: {fileID: -3769924257583345242, guid: 02e0df73bc81c3e44920acecb450f0bc, type: 3}
+  characterPhoto: {fileID: 5964364368804051251, guid: 89af5d346d87c8242bbecc7cb1362cd5, type: 3}
   characterName: Barberry

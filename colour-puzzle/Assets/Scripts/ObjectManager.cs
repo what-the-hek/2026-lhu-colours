@@ -9,6 +9,7 @@ public class ObjectManager : MonoBehaviour
     public GameObject blueObjectAfter;
     // public GameObject greenObjectBefore;
     public GameObject greenObjectAfter;
+    public GameObject green2ObjectAfter;
     // public GameObject purpleObjectBefore;
     public GameObject purpleObjectAfter;
     public string ObjectClicked;
@@ -30,6 +31,10 @@ public class ObjectManager : MonoBehaviour
         {
             greenObjectAfter.gameObject.SetActive(false);
         }
+        if (green2ObjectAfter)
+        {
+            green2ObjectAfter.gameObject.SetActive(false);
+        }
         if (purpleObjectAfter)
         {
             purpleObjectAfter.gameObject.SetActive(false);
@@ -43,7 +48,7 @@ public class ObjectManager : MonoBehaviour
         {
             redObjectAfter.gameObject.SetActive(true);
         }
-        if (ObjectClicked == "red" && red2ObjectAfter)
+        if (ObjectClicked == "red2" && red2ObjectAfter)
         {
             red2ObjectAfter.gameObject.SetActive(true);
         }
@@ -55,9 +60,14 @@ public class ObjectManager : MonoBehaviour
         {
             greenObjectAfter.gameObject.SetActive(true);
         }
+        if (ObjectClicked == "green2" && green2ObjectAfter)
+        {
+            green2ObjectAfter.gameObject.SetActive(true);
+        }
         if (ObjectClicked == "purple" && purpleObjectAfter)
         {
             purpleObjectAfter.gameObject.SetActive(true);
         }
     }
+
 }
