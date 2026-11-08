@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4a308dae7ffd048a8b0eb8d5ae4a02, type: 3}
   m_Name: Bianca
   m_EditorClassIdentifier: 
-  characterPhoto: {fileID: 4631235684313111012, guid: c84e7a046841cc84288571b6b70fc878, type: 3}
+  characterPhoto: {fileID: 6000643766122734839, guid: 8d008786b389faa4f9d9de340cdf9c72, type: 3}
   characterName: Bianca
