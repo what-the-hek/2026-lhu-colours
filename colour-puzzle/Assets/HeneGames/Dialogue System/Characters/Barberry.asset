@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f4a308dae7ffd048a8b0eb8d5ae4a02, type: 3}
-  m_Name: Villager
+  m_Name: Barberry
   m_EditorClassIdentifier: 
-  characterPhoto: {fileID: 21300000, guid: 30b889a4f550bc14d9363694ecfba282, type: 3}
-  characterName: Villager
+  characterPhoto: {fileID: -3769924257583345242, guid: 02e0df73bc81c3e44920acecb450f0bc, type: 3}
+  characterName: Barberry
