@@ -1,7 +1,8 @@
-using UnityEngine;
-using UnityEngine.InputSystem;
 using System;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 // A class to handle magical effects following the cursor and the different states it can be in (e.g. intense glow when hovering an interactable)
 public class CursorFollow : MonoBehaviour
@@ -20,6 +21,7 @@ public class CursorFollow : MonoBehaviour
 
     [Tooltip("Is the cursor currently hovering over an interactable object?")]
     public bool isHoveringInteractable = false;
+    public bool isHoveringUIButton = false;
 
     [Header("2D Physics Settings")]
     [Tooltip("Only check these specific layers for interactables (Highly recommended for performance).")]
@@ -114,6 +116,14 @@ public class CursorFollow : MonoBehaviour
         else
         {
             isHoveringInteractable = false;
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                isHoveringUIButton = true;//hit.collider.GetComponentInParent<RuneButton>() != null;
+            }
+            else
+            {
+                isHoveringUIButton = false;
+            }
         }
 
         // Detect click to instantly surge the progress value and fire a burst
@@ -132,14 +142,17 @@ public class CursorFollow : MonoBehaviour
                 /// still give some visual feedback for a 'failed cast' - but less
                 particleSys.Emit(30); // Instant magic spell blast count
                 hoverProgress = 1f;    // Set progress to max opacity/size instantly so it "pulses"
-                // Don't spawn any more after the burst
-               // emissionFactor = 0f;
+                                       // Don't spawn any more after the burst
+                                       // emissionFactor = 0f;
             }
-            StartCoroutine(ExecuteAfterTime(0.75f, () =>
+            if (!isHoveringUIButton) // Make sure we don't dismiss the rune if our click was to select a new rune
+            {
+                StartCoroutine(ExecuteAfterTime(0.75f, () =>
             {
                 // Deselect the rune
                 playerController.ChosenRune = "";
             }));
+            }
         }
 
         // Smoothly track whether we should be visible or faded based on the rune status

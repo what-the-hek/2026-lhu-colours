@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6263663705424065310}
   - component: {fileID: 3610005752081807694}
   - component: {fileID: 7433094585702441437}
+  - component: {fileID: 5101841876972558680}
   m_Layer: 5
   m_Name: Btn-GreenRune
   m_TagString: Untagged
@@ -162,6 +163,52 @@ MonoBehaviour:
   tooltipText: 
   tooltipPrefab: {fileID: 0}
   canvas: {fileID: 0}
+--- !u!61 &5101841876972558680
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59334200481326115}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.4112873, y: 0.19152069}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 57.345776, y: 56.5515}
+  m_EdgeRadius: 0
 --- !u!1 &2151483975281320223
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,6 +630,7 @@ GameObject:
   - component: {fileID: 1041046874249420151}
   - component: {fileID: 1299397429818846585}
   - component: {fileID: 8063789826859288737}
+  - component: {fileID: 1886050105597338652}
   m_Layer: 5
   m_Name: Btn-RedRune
   m_TagString: Untagged
@@ -746,6 +794,52 @@ MonoBehaviour:
   tooltipText: 
   tooltipPrefab: {fileID: 843102232158436017, guid: 217cec46509ac9348addbecfb8bc2329, type: 3}
   canvas: {fileID: 4566486982529528565}
+--- !u!61 &1886050105597338652
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5257325543989069149}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.4112873, y: 0.19152069}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 57.345776, y: 56.5515}
+  m_EdgeRadius: 0
 --- !u!1 &6798227706258682526
 GameObject:
   m_ObjectHideFlags: 0
@@ -760,6 +854,7 @@ GameObject:
   - component: {fileID: 7716115474256142383}
   - component: {fileID: 8062667020815561766}
   - component: {fileID: 5121110349187905967}
+  - component: {fileID: 6775225208854186160}
   m_Layer: 5
   m_Name: Btn-PurpleRune
   m_TagString: Untagged
@@ -908,6 +1003,52 @@ MonoBehaviour:
   tooltipText: 
   tooltipPrefab: {fileID: 0}
   canvas: {fileID: 0}
+--- !u!61 &6775225208854186160
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6798227706258682526}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.4112873, y: 0.19152069}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 57.345776, y: 56.5515}
+  m_EdgeRadius: 0
 --- !u!1 &7461043195336565068
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,6 +1095,7 @@ GameObject:
   - component: {fileID: 2973011110890295741}
   - component: {fileID: 983392834015917937}
   - component: {fileID: 4132398450467962576}
+  - component: {fileID: 8615159589353426631}
   m_Layer: 5
   m_Name: 'Btn-BlueRune '
   m_TagString: Untagged
@@ -1102,3 +1244,49 @@ MonoBehaviour:
   tooltipText: 
   tooltipPrefab: {fileID: 0}
   canvas: {fileID: 0}
+--- !u!61 &8615159589353426631
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8466700139684599994}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.4112873, y: 0.19152069}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 57.345776, y: 56.5515}
+  m_EdgeRadius: 0
