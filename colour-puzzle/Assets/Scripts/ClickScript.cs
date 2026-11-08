@@ -49,7 +49,7 @@ public class ClickObject : MonoBehaviour
     public void CompareValues(string ObjectClicked, bool updateScore)
     {
         Debug.Log($"Clicked {ObjectClicked} object");
-        if (ObjectClicked.Contains(playerController.ChosenRune)) // contains instead of equal to allow for red2, green2 etc.
+        if (!playerController.ChosenRune.Equals("") && ObjectClicked.Contains(playerController.ChosenRune)) // contains instead of equal to allow for red2, green2 etc.
         {
             Debug.Log("Correct rune applied to object!");
             audioManager.PlayMagicObject();
