@@ -10,22 +10,27 @@ public class ClickObject : MonoBehaviour
     {
         if (CompareTag("red_object"))
         {
-            CompareValues("red");
+            CompareValues("red", true);
+            // Debug.Log("red rune applied to red object");
+        }
+        if (CompareTag("red2_object"))
+        {
+            CompareValues("red", false);
             // Debug.Log("red rune applied to red object");
         }
         else if (CompareTag("blue_object"))
         {
-            CompareValues("blue");
+            CompareValues("blue", true);
             // Debug.Log("blue rune applied to blue object");
         }
         else if (CompareTag("purple_object"))
         {
-            CompareValues("purple");
+            CompareValues("purple", true);
             // Debug.Log("purple rune applied to purple object");
         }
         else if (CompareTag("green_object"))
         {
-            CompareValues("green");
+            CompareValues("green", true);
             // Debug.Log("green rune applied to green object");
         }
         else
@@ -34,14 +39,17 @@ public class ClickObject : MonoBehaviour
         }
     }
 
-    public void CompareValues(string ObjectClicked)
+    public void CompareValues(string ObjectClicked, bool updateScore)
     {
         Debug.Log($"Clicked {ObjectClicked} object");
         if (playerController.ChosenRune == ObjectClicked)
         {
             Debug.Log("Correct rune applied to object!");
             audioManager.PlayMagicObject();
-            scoreManager.UpdateScore();
+            if(updateScore) // Some optional objects do not update level progression
+            {
+                scoreManager.UpdateScore();
+            }
             objectManager.SwitchSprite(ObjectClicked);
             gameObject.SetActive(false);
         }
