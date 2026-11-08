@@ -13,9 +13,10 @@ public class ClickObject : MonoBehaviour
             CompareValues("red", true);
             // Debug.Log("red rune applied to red object");
         }
-        if (CompareTag("red2_object"))
+        // This is an Optional red object. Doesn't progress level score.
+        else if (CompareTag("red2_object"))
         {
-            CompareValues("red", false);
+            CompareValues("red2", false);
             // Debug.Log("red rune applied to red object");
         }
         else if (CompareTag("blue_object"))
@@ -33,6 +34,12 @@ public class ClickObject : MonoBehaviour
             CompareValues("green", true);
             // Debug.Log("green rune applied to green object");
         }
+        // This is an Optional green object. Doesn't progress level score.
+        else if (CompareTag("green2_object"))
+        {
+            CompareValues("green2", false);
+            // Debug.Log("green rune applied to green object");
+        }
         else
         {
             Debug.Log("not an interactable object");
@@ -42,7 +49,7 @@ public class ClickObject : MonoBehaviour
     public void CompareValues(string ObjectClicked, bool updateScore)
     {
         Debug.Log($"Clicked {ObjectClicked} object");
-        if (playerController.ChosenRune == ObjectClicked)
+        if (ObjectClicked.Contains(playerController.ChosenRune)) // contains instead of equal to allow for red2, green2 etc.
         {
             Debug.Log("Correct rune applied to object!");
             audioManager.PlayMagicObject();

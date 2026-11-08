@@ -36,6 +36,13 @@ public class ScoreManager : MonoBehaviour
         if (GlobalVariables.CurrentLevel == GlobalVariables.LevelScore)
         {
             Debug.Log("Level passed. Activating next level button.");
+
+            // Find Switchable sprites that pass on level complete and update them
+            var sprites = FindObjectsByType<SwitchableSprite>();
+            foreach (var sprite in sprites)
+            {
+                sprite.SwitchSprite("levelpassed");
+            }
             nextButton.gameObject.SetActive(true);
         }
     }
