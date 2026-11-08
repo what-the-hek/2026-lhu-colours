@@ -1,0 +1,587 @@
+fileFormatVersion: 2
+guid: ca08a71aec7cd774e84e76a84303564f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4454387043369157256
+    second: Living roomPotPlantDying_0
+  - first:
+      213: 1157848727307292925
+    second: Living roomPotPlantDying_1
+  - first:
+      213: -6904325204556377026
+    second: Living roomPotPlantDying_2
+  - first:
+      213: -8711574987856974051
+    second: Living roomPotPlantDying_3
+  - first:
+      213: -8215377835984312410
+    second: Living roomPotPlantDying_4
+  - first:
+      213: 2179416398113321201
+    second: Living roomPotPlantDying_5
+  - first:
+      213: -5409506164208988379
+    second: Living roomPotPlantDying_6
+  - first:
+      213: -4930526055007897297
+    second: Living roomPotPlantDying_7
+  - first:
+      213: -7970808118859315224
+    second: Living roomPotPlantDying_8
+  - first:
+      213: 2313470004373897980
+    second: Living roomPotPlantDying_9
+  - first:
+      213: -4466050071343777349
+    second: Living roomPotPlantDying_10
+  - first:
+      213: 5236192133779101716
+    second: Living roomPotPlantDying_11
+  - first:
+      213: 1122271741895168053
+    second: Living roomPotPlantDying_12
+  - first:
+      213: 2843550897470905738
+    second: Living roomPotPlantDying_13
+  - first:
+      213: -7918488101697029364
+    second: Living roomPotPlantDying_14
+  - first:
+      213: 2717388949875218479
+    second: Living roomPotPlantDying_15
+  - first:
+      213: -1246528582213370965
+    second: Living roomPotPlantDying_16
+  - first:
+      213: 5932490744997380219
+    second: Living roomPotPlantDying_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Living roomPotPlantDying_0
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 981
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8820f146a6921dd30800000000000000
+      internalID: 4454387043369157256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Living roomPotPlantDying_1
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 985
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df01ace6841811010800000000000000
+      internalID: 1157848727307292925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Living roomPotPlantDying_2
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 1002
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3414a0aec8ee20a0800000000000000
+      internalID: -6904325204556377026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Living roomPotPlantDying_3
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 1000
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1f6b9654b44a1780800000000000000
+      internalID: -8711574987856974051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Living roomPotPlantDying_4
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 971
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a7a986926d1dfd80800000000000000
+      internalID: -8215377835984312410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Living roomPotPlantDying_5
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 967
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f0b433caa7de3e10800000000000000
+      internalID: 2179416398113321201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Living roomPotPlantDying_6
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 953
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52f8900fdc29de4b0800000000000000
+      internalID: -5409506164208988379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Living roomPotPlantDying_7
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 924
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f29327f0da0439bb0800000000000000
+      internalID: -4930526055007897297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Living roomPotPlantDying_8
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 907
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e7479e3f30026190800000000000000
+      internalID: -7970808118859315224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Living roomPotPlantDying_9
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 891
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf24a3136b81b1020800000000000000
+      internalID: 2313470004373897980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Living roomPotPlantDying_10
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 759
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb9327c4f176502c0800000000000000
+      internalID: -4466050071343777349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Living roomPotPlantDying_11
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 744
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 418199dc001baa840800000000000000
+      internalID: 5236192133779101716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Living roomPotPlantDying_12
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 734
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 530de15043c139f00800000000000000
+      internalID: 1122271741895168053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Living roomPotPlantDying_13
+      rect:
+        serializedVersion: 2
+        x: 1663
+        y: 728
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8d1f78b972567720800000000000000
+      internalID: 2843550897470905738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Living roomPotPlantDying_14
+      rect:
+        serializedVersion: 2
+        x: 1529
+        y: 723
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0bf0348601eb1290800000000000000
+      internalID: -7918488101697029364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Living roomPotPlantDying_15
+      rect:
+        serializedVersion: 2
+        x: 1557
+        y: 704
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2852e14ada16b520800000000000000
+      internalID: 2717388949875218479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Living roomPotPlantDying_16
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 706
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: babfccedbd073bee0800000000000000
+      internalID: -1246528582213370965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Living roomPotPlantDying_17
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 704
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b708cd0a6e0745250800000000000000
+      internalID: 5932490744997380219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Living roomPotPlantDying_0: 4454387043369157256
+      Living roomPotPlantDying_1: 1157848727307292925
+      Living roomPotPlantDying_10: -4466050071343777349
+      Living roomPotPlantDying_11: 5236192133779101716
+      Living roomPotPlantDying_12: 1122271741895168053
+      Living roomPotPlantDying_13: 2843550897470905738
+      Living roomPotPlantDying_14: -7918488101697029364
+      Living roomPotPlantDying_15: 2717388949875218479
+      Living roomPotPlantDying_16: -1246528582213370965
+      Living roomPotPlantDying_17: 5932490744997380219
+      Living roomPotPlantDying_2: -6904325204556377026
+      Living roomPotPlantDying_3: -8711574987856974051
+      Living roomPotPlantDying_4: -8215377835984312410
+      Living roomPotPlantDying_5: 2179416398113321201
+      Living roomPotPlantDying_6: -5409506164208988379
+      Living roomPotPlantDying_7: -4930526055007897297
+      Living roomPotPlantDying_8: -7970808118859315224
+      Living roomPotPlantDying_9: 2313470004373897980
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
