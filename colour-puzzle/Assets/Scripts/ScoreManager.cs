@@ -45,4 +45,9 @@ public class ScoreManager : MonoBehaviour
         Debug.Log("You have clicked the next room!");
 		SceneManager.LoadScene(nextScene);
 	}
+
+    public void LoadLevel(string levelName)
+    {
+        SceneManager.LoadScene(levelName);
+    }
 }

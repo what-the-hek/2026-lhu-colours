@@ -2527,15 +2527,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.data[0].sentence
-      value: "\u201CPhew.. Its been a while since I\u2019ve thought of those spells Granny told me about. I didn\u2019t realize they could do more than help with the dishes.\u201D\r\n"
+      value: "Phew.. Its been a while since I\u2019ve thought of those spells Granny told me about. I didn\u2019t realize they could do more than help with the dishes."
       objectReference: {fileID: 0}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.data[1].sentence
-      value: "\u201CI don\u2019t know what to expect going in. Granny\u2019s letter said the house was mine, that when she\u2026\u201D\r\n"
+      value: "I don\u2019t know what to expect going in. Granny\u2019s letter said the house was mine, that when she\u2026\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.data[2].sentence
-      value: "\u201COkay then. Lets see\u201D\r\n"
+      value: Okay then. Lets see.
       objectReference: {fileID: 0}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.data[3].sentence
@@ -2543,15 +2543,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.data[4].sentence
-      value: "\u201CTalk about walking into a memory, it doesn\u2019t feel the same without the rain and fireplace going. Gran didn\u2019t use this room much unless it was bad weather. She said it was the warmest room to be sewing in.\u201D \r\n"
+      value: "Talk about walking into a memory. It doesn\u2019t feel the same without the rain and fireplace going. Gran didn\u2019t use this room much unless it was bad weather. She said it was the warmest room to be sewing in.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.data[5].sentence
-      value: "\u201CI can still remember her speaking little rituals and the purpose she would speak to herself when going about her day\u201D\r\n"
+      value: I can still remember her speaking little rituals and the purpose with which she would speak to herself when going about her day.
       objectReference: {fileID: 0}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.data[6].sentence
-      value: "\u201CHow did she use to light the fire again?\u201D  "
+      value: 'How did she used to light the fire again? '
       objectReference: {fileID: 0}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.data[0].sentenceSound

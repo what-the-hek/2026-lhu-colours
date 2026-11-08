@@ -4,6 +4,7 @@ public class ObjectManager : MonoBehaviour
 {
     // public GameObject redObjectBefore;
     public GameObject redObjectAfter;
+    public GameObject red2ObjectAfter;
     // public GameObject blueObjectBefore;
     public GameObject blueObjectAfter;
     // public GameObject greenObjectBefore;
@@ -16,6 +17,10 @@ public class ObjectManager : MonoBehaviour
         if (redObjectAfter)
         {
             redObjectAfter.gameObject.SetActive(false);
+        }
+        if (red2ObjectAfter)
+        {
+            red2ObjectAfter.gameObject.SetActive(false);
         }
         if (blueObjectAfter)
         {
@@ -37,6 +42,10 @@ public class ObjectManager : MonoBehaviour
         if (ObjectClicked == "red" && redObjectAfter)
         {
             redObjectAfter.gameObject.SetActive(true);
+        }
+        if (ObjectClicked == "red" && red2ObjectAfter)
+        {
+            red2ObjectAfter.gameObject.SetActive(true);
         }
         if (ObjectClicked == "blue" && blueObjectAfter)
         {
