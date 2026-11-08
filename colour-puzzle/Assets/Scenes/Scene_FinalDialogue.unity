@@ -942,6 +942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectManager
   redObjectAfter: {fileID: 0}
+  red2ObjectAfter: {fileID: 0}
   blueObjectAfter: {fileID: 0}
   greenObjectAfter: {fileID: 0}
   purpleObjectAfter: {fileID: 0}
@@ -1425,7 +1426,7 @@ PrefabInstance:
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.data[3].sentenceSound
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 160ec474a3a820c4ea85bdc7936af3d6, type: 3}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.data[4].sentenceSound
       value: 
