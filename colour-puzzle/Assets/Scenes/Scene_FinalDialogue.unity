@@ -945,6 +945,7 @@ MonoBehaviour:
   red2ObjectAfter: {fileID: 0}
   blueObjectAfter: {fileID: 0}
   greenObjectAfter: {fileID: 0}
+  green2ObjectAfter: {fileID: 0}
   purpleObjectAfter: {fileID: 0}
   ObjectClicked: 
 --- !u!1 &1430121981
@@ -1414,7 +1415,7 @@ PrefabInstance:
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.data[0].sentenceSound
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 1a7ce630287f78f41bef980d766ab076, type: 3}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.data[1].sentenceSound
       value: 
@@ -1422,7 +1423,7 @@ PrefabInstance:
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.data[2].sentenceSound
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: acea3ddbacd91774ca640d03405a327c, type: 3}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.data[3].sentenceSound
       value: 

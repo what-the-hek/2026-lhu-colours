@@ -558,6 +558,7 @@ GameObject:
   - component: {fileID: 703057468}
   - component: {fileID: 703057469}
   - component: {fileID: 703057470}
+  - component: {fileID: 703057471}
   m_Layer: 0
   m_Name: bowlgrey-lvl3_0
   m_TagString: blue_object
@@ -702,6 +703,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 13.910001, y: 7.1500006}
   m_EdgeRadius: 0
+--- !u!114 &703057471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703057466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7866a4eb08da4d4429695a95e6e396ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IInteractable
 --- !u!1 &767709266
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,6 +841,7 @@ GameObject:
   - component: {fileID: 866772431}
   - component: {fileID: 866772430}
   - component: {fileID: 866772429}
+  - component: {fileID: 866772432}
   m_Layer: 0
   m_Name: candles
   m_TagString: red2_object
@@ -972,6 +986,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &866772432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866772427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7866a4eb08da4d4429695a95e6e396ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IInteractable
 --- !u!1 &914597349
 GameObject:
   m_ObjectHideFlags: 0
@@ -1121,6 +1147,7 @@ GameObject:
   - component: {fileID: 1284000817}
   - component: {fileID: 1284000818}
   - component: {fileID: 1284000819}
+  - component: {fileID: 1284000820}
   m_Layer: 0
   m_Name: broommess-lvl3
   m_TagString: purple_object
@@ -1265,6 +1292,18 @@ MonoBehaviour:
   objectManager: {fileID: 233541723}
   scoreManager: {fileID: 1435410686}
   audioManager: {fileID: 1430467317}
+--- !u!114 &1284000820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284000815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7866a4eb08da4d4429695a95e6e396ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IInteractable
 --- !u!1 &1430467315
 GameObject:
   m_ObjectHideFlags: 0
@@ -1833,6 +1872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1608443156}
   - component: {fileID: 1608443157}
+  - component: {fileID: 1608443158}
   m_Layer: 0
   m_Name: Fire-lvl3_0
   m_TagString: Untagged
@@ -1915,6 +1955,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &1608443158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608443155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7866a4eb08da4d4429695a95e6e396ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IInteractable
 --- !u!1001 &1627269011
 PrefabInstance:
   m_ObjectHideFlags: 0
